@@ -62,6 +62,10 @@ function showCurlCommand(mergedEndpoint) {
     ' -d "{\\"registration_ids\\":[\\"' + subscriptionId + '\\"]}"';
 
   curlCommandDiv.textContent = curlCommand;
+  console.log('endpoint is : '+ subscription.endpoint);
+  console.log('key is : '+ btoa(String.fromCharCode.apply(null, new Uint8Array(subscription.getKey('p256dh')))).replace(/\+/g, '-').replace(/\//g, '_'));
+  console.log('auth is : '+ btoa(String.fromCharCode.apply(null, new Uint8Array(subscription.getKey('auth')))).replace(/\+/g, '-').replace(/\//g, '_'));
+  
 }
 
 function unsubscribe() {
