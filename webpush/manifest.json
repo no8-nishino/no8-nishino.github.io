@@ -1,0 +1,12 @@
+{
+  "name": "web push test",
+  "short_name": "web push",
+  "icons": [{
+    "src": "test.png",
+    "sizes": "256x256",
+    "type": "image/png"
+  }],
+  "start_url": "https://no8-nishino.github.io/",
+  "display": "standalone",
+  "gcm_sender_id": "202715805644"
+}
