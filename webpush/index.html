@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1">
+    <title>Web Push Test</title>
+    <link rel="stylesheet" href="/css/webpush.css">
+    <script src="/js/webpush.js"></script>
+  </head>
+  <body>
+    <h1>Web Push Test</h1>
+    <fieldset>
+      <legend>Subscribe Push Notification</legend>
+      <button id="subscribe" disabled></button>
+      <fieldset id="authtype">
+        <legend>Push Server Authentication</legend>
+        <input type="radio" name="authtype" id="authvapid" value="vapid" checked><label for="authvapid">use VAPID</label>
+        <input type="radio" name="authtype" id="authgcm" value="gcm"><label for="authgcm">use GCM sender ID</label>
+      </fieldset>
+    <div id="status"></div>
+    </fieldset>
+    <fieldset>
+      <legend>Request Push Notification</legend>
+      <label for="message">message</label> <input id="message" placeholder="type your message" size="30" disabled><br>
+      <button id="push" disabled>push</button>
+    </fieldset>
+    <fieldset>
+      <legend>Push Subscription Detail</legend>
+      <dl>
+        <dt>endpoint</dt>
+        <dd id="endpoint"></dd>
+        <dt>key</dt>
+        <dd id="key"></dd>
+        <dt>authentication secret</dt>
+        <dd id="auth"></dd>
+      </dl>
+    </fieldset>
+    <fieldset id="response">
+      <legend>Response from Push Server</legend>
+      <dl>
+        <dt class="emerror">HTTP status code</dt>
+        <dd id="statuscode" class="emerror"></dd>
+        <dt class="iferror emerror">server error</dt>
+        <dd id="servererror" class="iferror emerror"></dd>
+        <dt>response body</dt>
+        <dd id="detail"></dd>
+      </dl>
+    </fieldset>
+  </body>
+</html>
