@@ -11,7 +11,7 @@ function encodeBase64URL(buffer) {
 }
 
 function decodeBase64URL(str) {
-  let dec = btoa(str.replace(/\-/g, '+').replace(/_/g, '/'));
+  let dec = atob(str.replace(/\-/g, '+').replace(/_/g, '/'));
   let buffer = new Uint8Array(dec.length);
   for(let i = 0 ; i < dec.length ; i++)
     buffer[i] = dec.charCodeAt(i);
