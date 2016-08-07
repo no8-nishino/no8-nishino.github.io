@@ -213,7 +213,7 @@ function init() {
     _('push').addEventListener('click', requestPushNotification, false);
     _('authvapid').addEventListener('change', setAuthType, false);
     _('authgcm').addEventListener('change', setAuthType, false);
-    fetch('./push/publicKey').then(getServerKey).then(setServerKey);
+    //fetch('./push/publicKey').then(getServerKey).then(setServerKey);
     navigator.serviceWorker.register('/webpush/serviceworker.js');
   }
   else {
