@@ -214,7 +214,7 @@ function init() {
     _('authvapid').addEventListener('change', setAuthType, false);
     _('authgcm').addEventListener('change', setAuthType, false);
     fetch('./push/publicKey').then(getServerKey).then(setServerKey);
-    navigator.serviceWorker.register('serviceworker.js');
+    navigator.serviceWorker.register('/webpush/serviceworker.js');
   }
   else {
     _('status').classList.add('no-sw');
