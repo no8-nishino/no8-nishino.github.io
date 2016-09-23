@@ -1,6 +1,6 @@
 'use strict';
 
-var API_KEY = 'AIzaSyA3zsYiSwmUIyFxutC4HdZNoe65hyXQp_w';
+var API_KEY = 'AIzaSyBQpxqJU0Yep1iZN9Oztzge20dDjAfZDys';
 var GCM_ENDPOINT = 'https://android.googleapis.com/gcm/send';
 
 var curlCommandDiv = document.querySelector('.js-curl-command');
